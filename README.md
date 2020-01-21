@@ -1,2 +1,2 @@
 # WooliesXTechChallenge
-A solution to WooliesX Tech challenge
+Solution to WooliesX Tech Challenge
