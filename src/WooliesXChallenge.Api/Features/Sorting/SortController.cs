@@ -21,7 +21,7 @@ namespace WooliesXChallenge.Api.Features.Sorting
         /// Gets a list of products sorted by price (low to high or high to low), product name ( ascending or descending)
         /// or recommended sort which sorts the products according to their popularity
         /// </summary> 
-        /// <param name="sort">
+        /// <param name="sortOption">
         /// A unique identifier for this call to the API.
         /// </param>
         /// <returns></returns>
@@ -30,9 +30,9 @@ namespace WooliesXChallenge.Api.Features.Sorting
         [HttpGet]
         [ProducesResponseType(typeof(List<Product>), 200)]
         [ProducesResponseType(400)]
-        public async Task<IActionResult> GetProducts([FromQuery]string sort)
+        public async Task<IActionResult> GetProducts([FromQuery]string sortOption)
         {
-            var (products, errors) = await _sortService.GetSortedProducts(sort);
+            var (products, errors) = await _sortService.GetSortedProducts(sortOption);
 
             if (errors != null)
             {
