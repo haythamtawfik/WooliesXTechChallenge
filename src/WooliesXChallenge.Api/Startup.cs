@@ -1,3 +1,6 @@
+using System;
+using System.IO;
+using System.Reflection;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -27,8 +30,16 @@ namespace WooliesXChallenge.Api
             services.AddHealthChecks();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo {Title = "WooliesX Tech Challenge API", Version = "v1"});
+                c.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Version = "v1",
+                    Title = "WooliesX Tech Challenge API",
+                    Contact = new OpenApiContact { Name = "Haytham Tawfik", Email = "haythm.osman@aucegypt.edu" }
+                });
+
+                c.DescribeAllParametersInCamelCase();
             });
+            services.AddSwaggerGenNewtonsoftSupport();
 
             services.TryAddSingleton<IUserService, UserService>();
             services.TryAddSingleton<ISortService, SortService>();
@@ -48,7 +59,11 @@ namespace WooliesXChallenge.Api
             }
 
             app.UseSwagger();
-            app.UseSwaggerUI(c => { c.SwaggerEndpoint("/swagger/v1/swagger.json", "WooliesX Tech Challenge API"); });
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "WooliesX Tech Challenge API");
+                c.DocumentTitle = "WooliesX Tech Challenge API";
+            });
 
             app.UseRouting();
 
