@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Net;
+﻿using System.Net;
 using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
 using Xunit;
 using Shouldly;
@@ -28,7 +25,7 @@ namespace WooliesXChallenge.Tests
 
             response.StatusCode.ShouldBe(HttpStatusCode.OK);
             user.Name.ShouldBe( "Haytham Tawfik");
-            user.Token.ShouldBe("f0bd6e11-7ebf-42ee-959c-f92844ad0bbd");
+            user.Token.ShouldBe("45ab025d-e470-4a0b-9d98-2b7da52fd137");
         }
     }
 }

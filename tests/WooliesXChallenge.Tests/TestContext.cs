@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Net.Http;
-using System.Text;
+﻿using System.Net.Http;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.TestHost;
-using Microsoft.CodeAnalysis.Options;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Options;
 using WooliesXChallenge.Api;
 using WooliesXChallenge.Api.Features.Common;
 using Xunit;
@@ -40,7 +35,7 @@ namespace WooliesXChallenge.Tests
                     sc.ConfigureAll<ApiSettings>(options=>
                     {
                         options.Name = "Haytham Tawfik";
-                        options.Token = "f0bd6e11-7ebf-42ee-959c-f92844ad0bbd";
+                        options.Token = "45ab025d-e470-4a0b-9d98-2b7da52fd137";
                     });
                     sc.ConfigureAll<ResourceApiSettings>(options =>
                         {

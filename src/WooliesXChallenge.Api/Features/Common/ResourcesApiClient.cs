@@ -2,7 +2,6 @@
 using System.Net.Http;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Options;
-using WooliesXChallenge.Api.Features.Users;
 using Serilog;
 using WooliesXChallenge.Api.Features.TrolleysTotals;
 
@@ -70,7 +69,7 @@ namespace WooliesXChallenge.Api.Features.Common
                 response.EnsureSuccessStatusCode();
             }
 
-            _logger.Information("Call to Calculate trolley total succeeded in");
+            _logger.Information("Call to Calculate trolley total succeeded");
             var total = await response.Content.ReadAsAsync<decimal>();
 
             return total;
