@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using WooliesXChallenge.Api.Features.Common;
 
 namespace WooliesXChallenge.Api.Features.TrolleysTotals
 {
@@ -12,12 +13,7 @@ namespace WooliesXChallenge.Api.Features.TrolleysTotals
         [Required]
         public List<Special> Specials { get; set; }
     }
-    public class Product
-    {
-        public string Name { get; set; }
-        public decimal Price { get; set; }
-    }
-
+    
     public class ProductQuantity
     {
         public string Name { get; set; }

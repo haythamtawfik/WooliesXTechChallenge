@@ -1,6 +1,3 @@
-using System;
-using System.IO;
-using System.Reflection;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -63,6 +60,7 @@ namespace WooliesXChallenge.Api
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "WooliesX Tech Challenge API");
                 c.DocumentTitle = "WooliesX Tech Challenge API";
+                c.RoutePrefix = "swagger";
             });
 
             app.UseRouting();
