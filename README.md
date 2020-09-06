@@ -1,7 +1,7 @@
 # WooliesXTechChallenge
 
 This is a solution to WoliesX challenge 
-The base URI for the published app is https://wooliesxchallengeapi20200122085735.azurewebsites.net/api/ 
+The base URI for the published app is https://wooliesxchallengeapidev.azurewebsites.net/api
 
 ## Endpoints
 - */health* 
@@ -14,4 +14,4 @@ The base URI for the published app is https://wooliesxchallengeapi20200122085735
 - Just added sample integration tests that covers only 3 tests for the sake of time
 - The solution uses .Net core 3.1
 - The solution is deployed on Microsoft Azure
-
+- Swagger documentation is available on https://wooliesxchallengeapidev.azurewebsites.net/swagger
